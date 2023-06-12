@@ -1,0 +1,150 @@
+<div class="wrapper">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__headline">
+        <div class="header__headline_text">
+          <p class="">Head maker</p>
+        </div>
+        <div class="header-menu__icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <nav class="header-menu">
+        <ul class="header-menu__list">
+          <li class="header-menu__item"><a routerLink="barber" class="header-menu__link">Главная</a></li>
+          <li class="header-menu__item"><a routerLink="price" class="header-menu__link">Услуги</a></li>
+          <li class="header-menu__item"><a routerLink="appointment" class="header-menu__link">Записаться</a></li>
+          <li class="header-menu__item"><a (click)="targetFormOpen()" routerLink="price" class="header-menu__link">Быстрая запись</a></li>
+        </ul>
+        <div class="header-menu__account header-account {{activeClass}}">
+          <div class="header-account__title" (click)="ToggleClass()">
+            <p>Действия с аккаунтом</p>
+          </div>
+          <ul class="header-account__list">
+            <li class="header-account__item">
+              <span>Name: </span><input class="header-account_input {{activeClass}}" type="text" value="{{user?.name}}">
+            </li>
+            <li class="header-account__item">
+              <span>E-mail: </span><input class="header-account_input {{activeClass}}" type="text" value="{{user?.email}}">
+            </li>
+            <li class="header-account__item"><a (click)="onLogout()" class="header-account__link">Выйти из аккаунта</a></li>
+            <li class="header-account__item"><a (click)="deleteAccount()" class="header-account__link">Удалить аккаунт</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div
+    class="drop-animate-list error-{{message.type}} accuracy-{{message.type}}"
+    *ngIf="message.text.length>0" >
+    <p>{{message.text}}</p>
+  </div>
+
+  <div *ngIf="FormOpen" (click)="targetFormOpen()" class="appointment__cover"></div>
+  <div class="main">
+    <form
+      class="appointment__window appointment-form"
+      *ngIf="FormOpen"
+      [formGroup]="formPopup"
+      (ngSubmit)="submitForm()"
+    >
+      <div class="appointment__booking" >
+        <div (click)="targetFormOpen()" class="appointment__close"></div>
+        <div class="appointment__booking_title price__title">
+          <p>Выберите удобную дату, время и место</p>
+        </div>
+        <div class="appointment__datePlace">
+          <div class="appointment__date">
+            <div class="appointment__date_input">
+              <input type="date"
+                     placeholder="Date"
+                     min="{{dateMin}}"
+                     max="{{dateMax}}"
+                     value = "{{date}}"
+                     [(ngModel)]="date"
+                     [ngModelOptions]="{standalone: true}"
+              >
+            </div>
+            <div class="appointment__date_input">
+              <input type="time"
+                     placeholder="time"
+                     min="8:00"
+                     max="20:00"
+                     value="{{time}}"
+                     [(ngModel)]="time"
+                     [ngModelOptions]="{standalone: true}"
+              >
+            </div>
+          </div>
+          <ul class="appointment__addresses addresses-list">
+            <li class="addresses-list__item">
+              <div class="addresses-list__address">
+                <input
+                  checked
+                  id="MoscowRodionova22"
+                  (change)="GetAddress($event)"
+                  value="Москва, ул. Родионова, д. 22"
+                  class="addresses-list__input"
+                  type="radio"
+                  name="address"
+                >
+                <label class="addresses-list__item_label" for="MoscowRodionova22">г. Москва, улица Родионова, дом 22</label>
+              </div>
+              <label class="addresses-list__img" for="MoscowRodionova22">
+                <img src="../../../assets/img/Moscow.jpg" alt="">
+              </label>
+            </li>
+            <li class="addresses-list__item">
+              <div class="addresses-list__address">
+                <input
+                  id="EkaterinburgZelenya121A"
+                  class="addresses-list__input"
+                  type="radio"
+                  (change)="GetAddress($event)"
+                  value="Екатеринбург, ул. Зеленая, д. 121А"
+                  name="address"
+                >
+                <label for="EkaterinburgZelenya121A" class="addresses-list__item_label">г. Екатеринбург, улица Зеленая, дом 121/а</label>
+              </div>
+              <label class="addresses-list__img" for="EkaterinburgZelenya121A">
+                <img src="../../../assets/img/SPB.jpg" alt="">
+              </label>
+            </li>
+            <li class="addresses-list__item">
+              <div class="addresses-list__address">
+                <input
+                  id="SPBMolokozavodskya9"
+                  class="addresses-list__input"
+                  type="radio"
+                  (change)="GetAddress($event)"
+                  value="Санкт-Петербург, ул. Молокозаводская, д. 9"
+                  name="address"
+                >
+                <label class="addresses-list__item_label" for="SPBMolokozavodskya9">г. Санкт-Петербург, улица Молокозаводская, дом 9</label>
+              </div>
+              <label class="addresses-list__img" for="SPBMolokozavodskya9">
+                <img src="../../../assets/img/EKB.jpg" alt="">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="appointment__accepting">
+        <button
+          class="appointment__accept ng_btn style-btn"
+          type="submit"
+          [disabled]="formPopup.invalid"
+        >
+          Accept</button>
+      </div>
+    </form>
+    <router-outlet></router-outlet>
+
+  </div>
+</div>
+

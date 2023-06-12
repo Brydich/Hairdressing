@@ -1,0 +1,124 @@
+<div class="welcome">
+  <h1 class="welcome__title">Добро пожаловать на наш сайт.</h1>
+  <h2 class="welcome__sub-title">Для начала, пожалуйста, войдите в систему.</h2>
+</div>
+<div
+  class="drop-animate-list error-{{message.type}} accuracy-{{message.type}}"
+  *ngIf="message.text.length>0" >
+  <p>{{message.text}}</p>
+</div>
+<form class="auth-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="auth-form__title">
+    <p>Sing in</p>
+  </div>
+  <ul class="auth-form__list">
+    <li class="auth-form__item">
+      <div class="auth-form__item_title">
+        <p>E-mail</p>
+      </div>
+      <div class="auth-form__item_field">
+        <input
+          class="auth-form__item_input"
+          type="text"
+          formControlName="email"
+          placeholder="E-mail">
+        <ul
+          class="auth-form__item_errors-list errors-list"
+          *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+          <li class="errors-list__item" *ngIf="form.get('email')?.errors?.['required']">
+            <span >The field must be filled in</span>
+          </li>
+          <li class="errors-list__item" *ngIf="form.get('email')?.errors?.['email']">
+            <span>The field must have "@"</span>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="auth-form__item">
+      <div class="auth-form__item_title">
+        <p>Password</p>
+      </div>
+      <div class="auth-form__item_field">
+        <input
+          class="auth-form__item_input"
+          type="password"
+          placeholder="Password"
+          formControlName="password">
+        <ul
+          class="auth-form__item_errors-list errors-list"
+          *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+          <li class="errors-list__item" *ngIf="form.get('password')?.errors?.['minlength']">
+            <span>The field must contain more symbols</span>
+          </li>
+          <li class="errors-list__item" *ngIf="form.get('password')?.errors?.['required']">
+            <span>The field must be filled in</span>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="auth-form__item auth-form__submit">
+      <button class="auth-form__submit_btn" [disabled]="form.invalid">Sign In</button>
+    </li>
+  </ul>
+  <div class="auth-form__switch-auth switch-auth">
+    <div class="switch-auth_text">
+      <a href="" [routerLink]="'/registration'">Haven't registered yet? <span>Do it right now!</span></a>
+    </div>
+  </div>
+</form>
+
+
+<!--
+<form class="auth-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="auth-form__title">
+    <p>Authorization</p>
+  </div>
+  <ul class="auth-form__list">
+    <li class="auth-form__field">
+      <div class="auth-form__field_title">
+        <p>E-mail</p>
+      </div>
+      &lt;!&ndash;<label for="auth-email" class="auth-form_label">Email</label>&ndash;&gt;
+      <input
+        id="auth-email"
+        type="text"
+        class="auth-form_input"
+        placeholder="Enter your E-mail"
+        formControlName="email"
+      >
+      <span
+        class="auth-form__mistakes"
+        *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+        <span *ngIf="form.get('email')?.errors?.['required']">E-mail must not be empty</span>
+        <span *ngIf="form.get('email')?.errors?.['email']">E-mail must contain "@" and domain name</span>
+      </span>
+    </li>
+    <li class="auth-form__field">
+      <div class="auth-form__field_title">
+        <p>Password</p>
+      </div>
+      &lt;!&ndash;<label for="auth-password" class="auth-form_label">Password</label>&ndash;&gt;
+      <input
+        id="auth-password"
+        type="password"
+        class="auth-form_input"
+        placeholder="Think up your password"
+        formControlName="password"
+      >
+      <span
+        class="auth-form__mistakes"
+        *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+        <span *ngIf="form.get('password')?.errors?.['required']">Password must not be empty</span>
+      </span>
+    </li>
+  </ul>
+  <button
+  type="submit"
+  class="auth-form_btn-signIn"
+  [disabled]="form.invalid"
+  >Sign In</button>
+  <div class="switch-auth">
+    <a [routerLink]="'/registration'" href="" class="auth-form_switchLink">Do you still not have an account? <span>Registration!</span></a>
+  </div>
+</form>
+-->

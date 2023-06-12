@@ -1,0 +1,157 @@
+<div
+  class="drop-animate-list error-{{message.type}} accuracy-{{message.type}}"
+  *ngIf="message.text.length>0" >
+  <p>{{message.text}}</p>
+</div>
+
+<div class="appointment">
+  <form
+    class="appointment__window appointment-form"
+    [formGroup]="formAppointment"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="appointment__booking" >
+      <div class="appointment__booking_title price__title">
+        <p>Выберите удобную дату, время и место</p>
+      </div>
+      <div class="appointment__datePlace">
+        <div class="appointment__date">
+
+          <div class="appointment__date_input">
+            <input type="date"
+                   placeholder="Date"
+                   min="{{dateAppointmentMin}}"
+            max="{{dateAppointmentMax}}"
+            value = "{{dateAppointment}}"
+            [(ngModel)]="dateAppointment"
+            [ngModelOptions]="{standalone: true}"
+            >
+          </div>
+          <div class="appointment__date_input">
+            <input type="time"
+                   placeholder="time"
+                   min="8:00"
+                   max="20:00"
+                   value="{{timeAppointment}}"
+                   [(ngModel)]="timeAppointment"
+                   [ngModelOptions]="{standalone: true}"
+            >
+          </div>
+        </div>
+        <ul class="appointment__addresses addresses-list">
+          <li class="addresses-list__item">
+            <input
+              checked
+              id="MoscowRodionova22"
+              (change)="GetAddress($event)"
+              value="Москва, ул. Родионова, д. 22"
+              class="addresses-list__input"
+              type="radio"
+              name="address"
+              >
+            <label class="addresses-list__item_label" for="MoscowRodionova22">г. Москва, улица Родионова, дом 22
+            </label>
+          </li>
+          <li class="addresses-list__item">
+            <input
+              id="EkaterinburgZelenya121A"
+              class="addresses-list__input"
+              type="radio"
+              (change)="GetAddress($event)"
+              value="Екатеринбург, ул. Зеленая, д. 121А"
+              name="address"
+            >
+            <label for="EkaterinburgZelenya121A" class="addresses-list__item_label">г. Екатеринбург, улица Зеленая, дом 121/а</label>
+          </li>
+          <li class="addresses-list__item">
+            <input
+              id="SPBMolokozavodskya9"
+              class="addresses-list__input"
+              type="radio"
+              (change)="GetAddress($event)"
+              value="Санкт-Петербург, ул. Молокозаводская, д. 9"
+              name="address"
+            >
+            <label class="addresses-list__item_label" for="SPBMolokozavodskya9">г. Санкт-Петербург, улица Молокозаводская, дом 9</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="appointment__filter">
+      <div class="appointment__filter_title price__title">
+        <p>Укажите диапазон цены</p>
+      </div>
+      <div class="appointment__range">
+        <input class="appointment__range_input"
+               type="number"
+               placeholder="0"
+               [(ngModel)]="minValue"
+               [ngModelOptions]="{standalone: true}"
+        >
+        <input class="appointment__range_input"
+               type="number"
+               placeholder="none"
+               [(ngModel)]="maxValue"
+               [ngModelOptions]="{standalone: true}"
+        >
+      </div>
+    </div>
+
+    <div class="price__button">
+      <button class="price__button-sort style-btn" (click)="SwitchSort()">Сортировать по цене</button>
+    </div>
+
+    <ul class="price__list price-list">
+      <li class="price-list__item"
+          *ngFor="let hairstyle of menu">
+        <div class="price-list__title">
+          <p>{{hairstyle.title}}</p>
+        </div>
+        <ul class="price-list__list section-list">
+          <li class="section-list__item"
+              *ngFor="let haircut of hairstyle.SectionInfo | filterByRange: minValue: maxValue: sortAscending">
+            <div class="section-list__title">
+              <p>{{haircut.title}}</p>
+            </div>
+            <div class="section-list__duration">
+              <p>{{haircut.duration}} min</p>
+            </div>
+            <div class="section-list__price">
+              <p>${{haircut.price}}</p>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="appointment__choosing">
+      <div class="appointment__choosing_title price__title">
+        <p>Выберите прическу, которая Вам нравится</p>
+      </div>
+      <ul class="appointment__gallery gallery-list" *ngFor="let section of menu">
+        <li class="gallery-list__item"
+            *ngFor="let item of section.SectionInfo | filterByRange: minValue: maxValue: sortAscending"
+            (click)="onSelectItem(item)"
+            [class._active]="item == activeItem">
+          <div class="gallery-list__image"><img src="{{item.imagePath}}" alt=""></div>
+          <div class="gallery-list__description">
+            <div class="gallery-list__title">
+              <p>{{item.title}}</p>
+            </div>
+            <div class="gallery-list__text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda at culpa debitis deserunt dolor doloremque dolorum ducimus eos fuga fugiat in minima molestiae natus nihil perferendis praesentium provident quaerat quidem quis, saepe, sapiente voluptate, voluptatem. Alias deleniti eius eos fugiat, impedit in ipsam itaque officia omnis pariatur placeat veritatis.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="appointment__accepting">
+      <button
+        class="appointment__accepti ng_btn style-btn"
+        type="submit"
+        [disabled]="formAppointment.invalid"
+      >
+        Accept</button>
+    </div>
+  </form>
+</div>

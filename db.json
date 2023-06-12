@@ -1,0 +1,432 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@mail.ru",
+      "name": "Имя",
+      "password": "123456"
+    },
+    {
+      "email": "ddq we2 e2",
+      "name": "www@sas",
+      "password": "123123123",
+      "id": 2
+    },
+    {
+      "email": "eeeeee",
+      "name": "1111@111",
+      "password": "000111",
+      "id": 3
+    },
+    {
+      "email": "TestName",
+      "name": "TestEmail@mail.ru",
+      "password": "testest",
+      "id": 4
+    },
+    {
+      "name": "nameOne",
+      "email": "One@mail.ru",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "name": "вфыв",
+      "email": "fsdjkn@asdasd",
+      "password": "das32d",
+      "id": 6
+    },
+    {
+      "name": "1",
+      "email": "1@1",
+      "password": "111111",
+      "id": 7
+    },
+    {
+      "name": "2",
+      "email": "2@2",
+      "password": "222222",
+      "dateAppointment": "2022-11-15T18:15:15.876Z",
+      "id": 8
+    },
+    {
+      "name": "kd s",
+      "email": "k@1",
+      "password": "111111",
+      "dateAppointment": "1899-12-30T21:29:43.000Z",
+      "id": 9
+    },
+    {
+      "name": "kd",
+      "email": "l@1",
+      "password": "111111",
+      "dateAppointment": "1899-12-30T21:29:43.000Z",
+      "id": 10
+    },
+    {
+      "name": "lfmds f",
+      "email": "kfjd@dsfds",
+      "password": "iuoenw",
+      "id": 11
+    },
+    {
+      "name": "Bob",
+      "email": "b@a",
+      "password": "124edsc",
+      "id": 12
+    },
+    {
+      "name": "dsfasfs",
+      "email": "dsad@s",
+      "password": "2345665432",
+      "id": 13
+    },
+    {
+      "name": "adswq",
+      "email": "23@wqdsa",
+      "password": "wde23we",
+      "id": 14
+    },
+    {
+      "name": "sadcwe",
+      "email": "sad@asd",
+      "password": "asd2wedsc",
+      "id": 15
+    },
+    {
+      "name": "qdewsa",
+      "email": "wqdsa@wqsa",
+      "password": "sdd32ws",
+      "id": 16
+    },
+    {
+      "name": "bgfvffw",
+      "email": "1@1",
+      "password": "asd312qwd",
+      "id": 17
+    },
+    {
+      "name": "sad",
+      "email": "1@1",
+      "password": "12232ewds",
+      "id": 18
+    },
+    {
+      "name": "Bob",
+      "email": "bob@mail.net",
+      "password": "111111",
+      "id": 19
+    },
+    {
+      "name": "das",
+      "email": "das@as",
+      "password": "e21123414",
+      "id": 20
+    },
+    {
+      "name": "Петр",
+      "email": "Petr@mail.ru",
+      "password": "111111",
+      "id": 21
+    },
+    {
+      "name": "Admin",
+      "email": "a@a",
+      "password": "aaaaaa",
+      "id": 22
+    },
+    {
+      "name": "das",
+      "email": "d@asd",
+      "password": "32142144",
+      "id": 23
+    },
+    {
+      "name": "Артем",
+      "email": "artem@mail.ru",
+      "password": "111111",
+      "id": 24
+    }
+  ],
+  "records": [
+    {
+      "date": "2023-01-01",
+      "time": "16:20",
+      "name": "Classic",
+      "address": "Санкт-Петербург, ул. Молокозаводская, д. 9"
+    },
+    {
+      "date": "2022-12-18",
+      "time": "16:34",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 1
+    },
+    {
+      "date": "2022-12-18",
+      "time": "16:34",
+      "name": "Haircut",
+      "address": "Санкт-Петербург, ул. Молокозаводская, д. 9",
+      "id": 2
+    },
+    {
+      "date": "2022-12-18",
+      "time": "16:35",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 3
+    },
+    {
+      "date": "2022-12-18",
+      "time": "16:40",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 4
+    },
+    {
+      "date": "2022-12-18",
+      "time": "16:40",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 5
+    },
+    {
+      "date": "2022-12-18",
+      "time": "16:40",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 6
+    },
+    {
+      "date": "2022-12-18",
+      "time": "16:40",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 7
+    },
+    {
+      "date": "2022-12-18",
+      "time": "16:40",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 8
+    },
+    {
+      "date": "2022-12-18",
+      "time": "16:40",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 9
+    },
+    {
+      "date": "2022-12-18",
+      "time": "16:51",
+      "name": "Mo List",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 10
+    },
+    {
+      "date": "2022-12-18",
+      "time": "16:52",
+      "name": "Mo List",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 11
+    },
+    {
+      "date": "2022-12-20",
+      "time": "15:06",
+      "name": "Classic",
+      "address": "Екатеринбург, ул. Зеленая, д. 121А",
+      "id": 12
+    },
+    {
+      "date": "2022-12-19",
+      "time": "15:09",
+      "name": "Classic",
+      "address": "Санкт-Петербург, ул. Молокозаводская, д. 9",
+      "id": 13
+    },
+    {
+      "date": "2022-12-19",
+      "time": "15:09",
+      "name": "Classic",
+      "address": "Екатеринбург, ул. Зеленая, д. 121А",
+      "id": 14
+    },
+    {
+      "date": "2022-12-23",
+      "time": "15:12",
+      "name": "Classic",
+      "address": "Екатеринбург, ул. Зеленая, д. 121А",
+      "id": 15
+    },
+    {
+      "date": "2022-12-19",
+      "time": "15:10",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 16
+    },
+    {
+      "date": "2022-12-19",
+      "time": "15:11",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 17
+    },
+    {
+      "date": "2022-12-19",
+      "time": "15:11",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 18
+    },
+    {
+      "date": "2022-12-19",
+      "time": "15:12",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 19
+    },
+    {
+      "date": "2022-12-19",
+      "time": "15:13",
+      "name": "Haircuts",
+      "address": "Екатеринбург, ул. Зеленая, д. 121А",
+      "id": 20
+    },
+    {
+      "date": "2022-12-19",
+      "time": "15:35",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 21
+    },
+    {
+      "date": "2022-12-19",
+      "time": "15:35",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 22
+    },
+    {
+      "date": "2023-01-04",
+      "time": "13:39",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 23
+    },
+    {
+      "date": "2023-01-04",
+      "time": "13:39",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 24
+    },
+    {
+      "date": "2023-01-04",
+      "time": "13:39",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 25
+    },
+    {
+      "date": "2023-01-04",
+      "time": "13:39",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 26
+    },
+    {
+      "date": "2023-01-04",
+      "time": "13:39",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 27
+    },
+    {
+      "date": "2023-01-04",
+      "time": "13:39",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 28
+    },
+    {
+      "date": "2023-01-04",
+      "time": "13:39",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 29
+    },
+    {
+      "date": "2023-01-04",
+      "time": "13:39",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 30
+    },
+    {
+      "date": "2023-01-04",
+      "time": "13:39",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 31
+    },
+    {
+      "date": "2023-01-04",
+      "time": "13:39",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 32
+    },
+    {
+      "date": "2023-01-04",
+      "time": "13:39",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 33
+    },
+    {
+      "date": "2023-06-12",
+      "time": "17:55",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 34
+    },
+    {
+      "date": "2023-06-12",
+      "time": "17:55",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 35
+    },
+    {
+      "date": "2023-06-12",
+      "time": "17:55",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 36
+    },
+    {
+      "date": "2023-06-12",
+      "time": "17:55",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 37
+    },
+    {
+      "date": "2023-06-12",
+      "time": "17:55",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 38
+    },
+    {
+      "date": "2023-06-12",
+      "time": "17:55",
+      "name": "Classic",
+      "address": "Москва, ул. Родионова, д. 22",
+      "id": 39
+    }
+  ]
+}
